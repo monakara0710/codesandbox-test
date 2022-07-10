@@ -11,5 +11,7 @@ document.getElementById("app").innerHTML = `
 
 ホゲホゲ
 
+hogehuga
+
 
 `;
