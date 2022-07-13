@@ -136,8 +136,83 @@ const arr5 = [30, 40];
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
-const arr8 = arr4;
-console.log(arr8);
-arr8[0] = 100;
-console.log(arr8);
-console.log(arr4);
+// const arr8 = arr4;
+// console.log(arr8);
+// arr8[0] = 100;
+// console.log(arr8);
+// console.log(arr4);
+
+/**
+ *  mapやfilterを使った配列の処理
+ *
+ */
+const nameArr = ["田中", "山田", "じゃけえ"];
+
+// for (let index = 0; index <nameArr.length; index++){
+//   console.log(nameArr[index]);
+// }
+
+// const nameArr2 = nameArr.map((name)=>{
+//   return name == "田中";
+// })
+
+// console.log(nameArr2);
+// nameArr.map((name, index) => console.log(`${index + 1}は${name}です`));
+
+// const numArr = [1, 2, 3, 4, 5];
+// const neNumArr = numArr.filter((num) => {
+//   return num % 2 === 0;
+// });
+// console.log(neNumArr);
+
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "じゃけえ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+
+// const val1 = 1 > 0 ? "true" : "false";
+// console.log(val1);
+
+// const num = "hoge";
+// console.log(num.toLocaleString());
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+};
+
+console.log(checkSum(1, 100));
+
+/**
+ * 論理演算しの本当の意味を知ろう
+ */
+
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("1か2はtrue");
+}
+
+if (flag1 && flag2) {
+  console.log("1と2はtrue");
+}
+
+// const num = 100;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+const num = 100;
+const fee = num && "設定されています";
+console.log(fee);
